@@ -1,8 +1,9 @@
 require 'capistrano'
+require 'capistrano/bundler'
 
-# unless Capistrano::Configuration.respond_to?(:instance)
-#   abort 'capistrano/shared_file requires Capistrano 2'
-# end
+unless Capistrano::Configuration.respond_to?(:instance)
+  abort 'capistrano/shared_file requires Capistrano 3'
+end
 
 Capistrano::Configuration.instance.load do
 
